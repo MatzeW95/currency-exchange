@@ -14,7 +14,6 @@ const History = () => {
    {value: "CNY", name: "Chinese Renminbi Yuan"},
    {value: "CZK", name: "Czech Koruna"},
    {value: "DKK", name: "Danish Krone"},
-   {value: "EUR", name: "Euro"},
    {value: "GBP", name: "British Pound"},
    {value: "HKD", name: "Hong Kong Dollar"},
    {value: "HUF", name: "Hungarian Forint"},
