@@ -8,7 +8,7 @@ const Header = () => {
             </a>
             <div id="headerNavContainer">
                 <a href="#rates" className="navItem">Wechselkurs</a>
-                <a href="#calculatorHistory" className="navItem">Wechselkursrechner</a>
+                <a href="#calc" className="navItem">Wechselkursrechner</a>
                 <a href="#history" className="navItem">Historischer Verlauf</a>
             </div>
         </div>
