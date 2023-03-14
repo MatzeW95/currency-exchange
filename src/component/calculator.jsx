@@ -74,6 +74,7 @@ const Calculator = () => {
     const API_URL = "https://api.frankfurter.app/";
 
     const option = {
+        color: '#F3A953',
         tooltip: {
             trigger: 'axis',
             position: function (pt) {
@@ -83,7 +84,7 @@ const Calculator = () => {
         grid: {
             left: '10%',
             top: '5%',
-            right: 0,
+            right: 6,
             bottom: 20
         },
         xAxis: {
@@ -94,7 +95,7 @@ const Calculator = () => {
             },
             axisLine: {
                  lineStyle: {
-                    color: '#000'
+                    color: '#FFF'
                     }
             }
         },
@@ -108,7 +109,7 @@ const Calculator = () => {
             },
             axisLine: {
                 lineStyle: {
-                    color: '#000'
+                    color: '#FFF'
                 }
             },
             axisLabel: {
@@ -197,27 +198,34 @@ const Calculator = () => {
     }
 
     return (
-        <div id="calculatorHistory">
-            <div className="calculator">
-                <div className="calculatorInput">
-                    <input defaultValue={1} id="inputNumber" type="number" onChange={handleAmountChange}></input>
-                    <select defaultValue={"EUR"} name="inputCurrency" id="inputCurrency" className="selectCurrency" onChange={handleInputChange}>
-                        {selectValue.map((item, index) => (
-                            <option value={item.value} key={index} className="option">{item.name}</option>
-                        ))}
-                    </select>
+        <div id="calc">
+            <div id="calculatorHistory">
+                <div id="calcHistoryTop">
+                    <h2>Wechselkursrechner</h2>
                 </div>
-                <div className="calculatorOutput">
-                    <p>{outputAmount}</p>
-                    <select defaultValue={"USD"} name="outputCurrency" id="outputCurrency" className="selectCurrency" onChange={handleOutputChange}>
-                        {selectValue.map((item, index) => (
-                            <option value={item.value} key={index} className="option">{item.name}</option>
-                        ))}
-                    </select>
-                </div> 
-            </div>
-            <div className="calcHistory">
-                <ReactEcharts className="calcHistoryGraph" option={option} />
+                <div id="calcHistoryBottom">
+                    <div className="calculator">
+                        <div className="calculatorInput">
+                            <input defaultValue={1} id="inputNumber" type="number" onChange={handleAmountChange}></input>
+                            <select defaultValue={"EUR"} name="inputCurrency" id="inputCurrency" className="selectCurrency" onChange={handleInputChange}>
+                                {selectValue.map((item, index) => (
+                                    <option value={item.value} key={index} className="option">{item.name}</option>
+                                ))}
+                            </select>
+                        </div>
+                        <div className="calculatorOutput">
+                            <p>{outputAmount}</p>
+                            <select defaultValue={"USD"} name="outputCurrency" id="outputCurrency" className="selectCurrency" onChange={handleOutputChange}>
+                                {selectValue.map((item, index) => (
+                                    <option value={item.value} key={index} className="option">{item.name}</option>
+                                ))}
+                            </select>
+                        </div> 
+                    </div>
+                    <div className="calcHistory">
+                        <ReactEcharts className="calcHistoryGraph" option={option} />
+                    </div>
+                </div>
             </div>
         </div>
     )
