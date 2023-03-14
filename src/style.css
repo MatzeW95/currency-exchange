@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root{
+    --fontWhite: #FFFFFF;
+    --fontBlack: #000000;
+
+    --headerBackground: blue;
+    --heroBackground: blue;
+
+    --accent: orange;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, select {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    outline: none;
+}
+
+.header {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: var(--headerBackground);
+    color: var(--fontWhite);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 1rem 5vw;
+}
+
+#headerNavContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#headerHeadline {
+    text-decoration: none;
+    color: var(--fontWhite);
+}
+
+.navItem {
+    margin: 0 3rem;
+    text-decoration: none;
+    color: var(--fontWhite);
+}
+
+.navItem:hover {
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.navItem:last-child {
+    margin-right: 0px;
+}
+
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 0 5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--heroBackground);
+}
+
+#hero > p {
+    margin: 0;
+    padding: 0;
+    width: 40%;
+    color: var(--fontWhite);
+}
+
+#heroImage {
+    width: 40%;
+}
+
+
+#rates {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 80vw;
+    padding-top: 150px;
+}
+
+#rates > h1 {
+    text-align: center;
+}
+
+.ratesText {
+    width: 40%;
+}
+
+.ratesChart {
+    width: 60%;
+}
+
+
+#calculatorHistory {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+}
+
+.calcHistory {
+    width: 65%;
+}
+
+.calculatorInput, .calculatorOutput {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#inputNumber {
+    padding: 0;
+    border-bottom: 2px solid var(--accent);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    height: 2rem;
+    min-width: 75px;
+    width: 40%;
+
+    box-sizing: border-box;
+    padding-left: 3px;
+}
+
+.calculatorOutput > p {
+    min-width: 75px;
+    width: 40%;
+    height: 2rem;
+    cursor: default;
+}
+
+#inputCurrency, #outputCurrency {
+    width: fit-content;
+    height: 2rem;
+    border: 0px;
+}
+
+.calculatorOutput > p {
+    margin: 0;
+}
+
+
+#history {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.historyInputDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#inputHistoryCurrency {
+    width: fit-content;
+    height: 2rem;
+    border: 0px;
+}
+
+.historyInputDiv > p {
+    margin: 0 0 0 0.5rem;
+}
+
+.historyGraph {
+    width: 100%;
+}
