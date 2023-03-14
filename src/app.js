@@ -12,9 +12,12 @@ const App = () => {
         <div className="app">
             <Header />
             <div id="hero">
-                <p>
-                    Willkommen auf unserer Webseite, die sich auf das Thema Wechselkurse spezialisiert hat. Hier finden Sie einen Währungsrechner und einen interaktiven Graphen, der die Historie von Wechselkursen darstellt.
-                </p>
+                <div>
+                    <h1>Currency Exchange</h1>
+                    <p>
+                        Willkommen auf unserer Webseite, die sich auf das Thema Wechselkurse spezialisiert hat. Hier finden Sie einen Währungsrechner und einen interaktiven Graphen, der die Historie von Wechselkursen darstellt.
+                    </p>
+                </div>
                 <img id="heroImage" src={require('./hero.png')} />
             </div>
             <Rates />
