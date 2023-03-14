@@ -56,10 +56,11 @@ const History = () => {
         grid: {
             left: '5%',
             top: '10%',
-            right: 0,
+            right: '5%',
             bottom: '30%'
         },
         toolbox: {
+            right:'5%',
             feature: {
               dataZoom: {
                 yAxisIndex: 'none',
