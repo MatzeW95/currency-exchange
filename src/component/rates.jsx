@@ -62,9 +62,9 @@ const Rates = () => {
                 fontFamily: 'Roboto'
             },
             axisLine: {
-                 lineStyle: {
+                lineStyle: {
                     color: '#000'
-                    }
+                }
             }
         },
         yAxis: {
@@ -80,7 +80,7 @@ const Rates = () => {
                     borderWidth: 2,
                     borderType: 'solid',
                     borderColor: '#366ED8'
-                  }
+                }
             }
         ],
         animationEasing: 'circularIn'
