@@ -47,6 +47,7 @@ const History = () => {
     }
 
     const option = {
+        color: '#064ACB',
         tooltip: {
             trigger: 'axis',
             position: function (pt) {
@@ -62,7 +63,10 @@ const History = () => {
         toolbox: {
             feature: {
               dataZoom: {
-                yAxisIndex: 'none'
+                yAxisIndex: 'none',
+                iconStyle: {
+                    BorderColor: "green"
+                }
               }
             }
         },
@@ -104,11 +108,11 @@ const History = () => {
                     color: new graphic.LinearGradient(0, 0, 0, 1, [
                       {
                         offset: 0,
-                        color: 'rgb(255, 158, 68)'
+                        color: '#064ACB'
                       },
                       {
                         offset: 1,
-                        color: 'rgb(255, 70, 131)'
+                        color: '#366ED8'
                       }])
                   }
             }
@@ -151,6 +155,7 @@ const History = () => {
 
     return (
         <div id="history">
+            <h2>Historischer Verlauf</h2>
             <div className="historyInputDiv">
                 <select defaultValue={"USD"} name="inputHistoryCurrency" id="inputHistoryCurrency" className="selectHistoryCurrency" onChange={handleInputChange}>
                     {selectValue.map((item, index) => (
