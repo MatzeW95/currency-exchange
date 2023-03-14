@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root{
-    --fontWhite: #FFFFFF;
-    --fontBlack: #000000;
+    --main: #FFF;
+    --secondary: #366ED8;
+    --accent: #F3A953;
+    --accentDark: #064ACB;
+    --reverseMain: #000000;
 
-    --headerBackground: blue;
-    --heroBackground: blue;
+    --fontWhite: var(--main);
+    --fontBlack: var(--reverseMain);
 
-    --accent: orange;
+    --headerBackground: var(--secondary);
+    --heroBackground: var(--secondary);
 
     scroll-behavior: smooth;
 }
@@ -33,6 +38,9 @@ input, select {
     font-family: "Roboto", sans-serif;
     font-size: 18px;
     font-weight: 400;
+    color: var(--fontWhite);
+    background-color: var(--heroBackground);
+    border: 2px solid var(--main);
     outline: none;
 }
 
@@ -62,6 +70,9 @@ input, select {
 #headerHeadline {
     text-decoration: none;
     color: var(--fontWhite);
+    font-family: "Noto Serif";
+    font-style: italic;
+    font-size: 22px;
 }
 
 .navItem {
@@ -92,11 +103,18 @@ input, select {
     background-color: var(--heroBackground);
 }
 
-#hero > p {
+#hero > div {
     margin: 0;
     padding: 0;
     width: 40%;
     color: var(--fontWhite);
+}
+
+h1 {
+    font-family: "Noto Serif";
+    font-style: italic;
+    font-weight: bold;
+    font-size: 3rem;
 }
 
 #heroImage {
@@ -126,11 +144,39 @@ input, select {
 }
 
 
+#calc {
+    padding-top: 40px;
+}
+
 #calculatorHistory {
+    border: 1px solid var(--secondary);
+    border-radius: 25px;
+    box-sizing: content-box;
+    padding: 2rem 4rem 4rem 4rem;
+    margin-top: 125px;
+    background-color: var(--secondary);
     width: 80vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+}
+
+#calcHistoryTop {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#calcHistoryTop > h2 {
+    margin: 0;
+    padding-bottom: 2rem;
+    color: var(--fontWhite);
+}
+
+#calcHistoryBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
 }
 
 .calculator {
@@ -158,7 +204,7 @@ input::-webkit-inner-spin-button {
 
 #inputNumber {
     padding: 0;
-    border-bottom: 2px solid var(--accent);
+    border-bottom: 2px solid var(--main);
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
@@ -175,23 +221,32 @@ input::-webkit-inner-spin-button {
     width: 40%;
     height: 2rem;
     cursor: default;
+    padding-left: 3px;
 }
 
 #inputCurrency, #outputCurrency {
     width: fit-content;
     height: 2rem;
-    border: 0px;
+    border-radius: 5px;
 }
 
 .calculatorOutput > p {
     margin: 0;
+    color: var(--fontWhite);
 }
 
 
 #history {
     width: 80vw;
+    height: 90vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+#history > h2 {
+    margin: 0 0 1rem 0;
 }
 
 .historyInputDiv {
@@ -204,6 +259,8 @@ input::-webkit-inner-spin-button {
     width: fit-content;
     height: 2rem;
     border: 0px;
+    background-color: var(--fontWhite);
+    color: var(--fontBlack);
 }
 
 .historyInputDiv > p {
