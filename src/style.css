@@ -49,7 +49,7 @@ select {
 }
 
 .header {
-    z-index: 10;
+    z-index: 5;
     position: fixed;
     top: 0;
     left: 0;
@@ -274,4 +274,164 @@ input::-webkit-inner-spin-button {
 
 .historyGraph {
     width: 100%;
+}
+
+.burgerMenu, #headerNavContainerMobile  {
+    display: none;
+}
+
+@media screen and (max-width: 975px) {
+
+    #headerNavContainer {
+        display: none;
+    }
+
+    .burgerMenu, #headerNavContainerMobile {
+        display: block;
+    }
+
+    #headerNavContainerMobile {
+        visibility: hidden;
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--secondary);
+    }
+
+    .burgerMenu {
+        width: 30px;
+        cursor: pointer;
+    }
+
+    #burgerMenuClose {
+        position: absolute;
+        top: 2.5%;
+        right: 5%;
+    }
+
+    .header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #headerContainerMobile {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        font-size: 3rem;
+        width: max-content;
+        margin: 5rem auto;
+        cursor: default;
+    }
+
+    .navItemMobile {
+        text-decoration: none;
+        color: var(--fontWhite);
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    #headerContainerMobile {
+        font-size: 2rem;
+    }
+
+    #headerNavContainerMobile {
+        width: 100%;
+        height: 100%;
+    }
+
+    #burgerMenuClose {
+        position: absolute;
+        top: 2.3%;
+        right: 4.8%;
+    }
+
+    #hero {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #hero > div {
+        width: 80%;
+        order: 2;
+        margin-top: 2rem;
+    } 
+
+    #hero > div > h1 {
+        display: none;
+    }
+
+    #heroImage {
+        width: 80%;
+        order: 1;
+    }
+
+    #rates {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 5rem 0 0 0;
+    }
+    
+    .ratesText {
+        width: 80%;
+    }
+    
+    .ratesChart {
+        width: 80%;
+    }
+
+    #calcHistoryTop {
+        margin-top: 2rem;
+    }
+
+    .calculatorInput {
+        column-gap: 1rem;
+    }
+    #calc {
+        padding: 0;
+    }
+
+    #calcHistoryBottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        align-items: center;
+    }
+
+    .calcHistory {
+        width: 80%;
+        margin-bottom: 3rem;
+    }
+    
+    .calculator {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+
+    #calculatorHistory {
+        border-radius: 0;
+        padding: 0;
+        width: 100vw;
+    }
+
+    .historyInputDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .historyInputDiv > p {
+        margin-left: 4px;
+    }
 }
