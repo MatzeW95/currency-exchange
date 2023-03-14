@@ -76,10 +76,10 @@ const Rates = () => {
                 type: 'bar',
                 label: labelOption,
                 itemStyle: {
-                    color:"blue",
+                    color:"#366ED8",
                     borderWidth: 2,
                     borderType: 'solid',
-                    borderColor: 'blue'
+                    borderColor: '#366ED8'
                   }
             }
         ],
@@ -89,7 +89,7 @@ const Rates = () => {
     return (
         <div id="rates">
             <div className="ratesText">
-                <h1>Wechselkurs</h1>
+                <h2>Wechselkurs</h2>
                 <p>
                     Der Wechselkurs des Euros (EUR) zu anderen Währungen wie dem US-Dollar (USD), dem Britischen Pfund (GBP), dem Australischen Dollar (AUD), dem Kanadischen Dollar (CAD) und dem Schweizer Franken (CHF) kann sich täglich ändern und hängt von verschiedenen Faktoren ab, wie beispielsweise der Wirtschaftslage, politischen Entwicklungen oder Zinssätzen.
                 </p>
